@@ -30,10 +30,8 @@ X_train, X_test, y_train, y_test = train_test_split(
     df["text"], df["label"], test_size=0.2, random_state=42, stratify=df["label"]
 )
 
-
-
 # Some parts of the pipeline were generated with the assistance of an AI tool.
-# line 41-44 was reviewed, tested, and modified by the author to fit the project's needs.
+# line 41-44, 52, 61-62, 65-66 was reviewed, tested, and modified by the author to fit the project's needs.
 
 # - Uses sklearn.pipeline.Pipeline to chain preprocessing and modeling steps together.
 # - TfidfVectorizer() converts text into TF-IDF features with unigrams and bigrams.
@@ -43,7 +41,7 @@ pipeline = Pipeline([
     ("clf", MultinomialNB(class_prior=[0.5, 0.5]))
 ])
 
-# 6. Train the model on the training set.
+# Train the model on the training set.
 # - pipeline.fit() runs the entire Pipeline:
 #   • Applies TF-IDF vectorization on X_train to convert text to numerical features.
 #   • Fits the Multinomial Naive Bayes classifier on the transformed data.
@@ -61,6 +59,6 @@ pipeline.fit(X_train, y_train)
 y_pred = pipeline.predict(X_test)
 print(classification_report(y_test, y_pred, target_names=["Credible", "Not Credible"]))
 
-# 8. Saves the model
+# Saves the model
 joblib.dump(pipeline, "filipino_fake_news_model.joblib")
 print("Model saved as filipino_fake_news_model.joblib")
