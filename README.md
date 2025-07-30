@@ -1,27 +1,39 @@
-FILIPINO FAKE NEWS DETECTOR 
+**Filipino Fake News Detector**
 
-Summary: 
-  Content includes train.py that builds the machine learning tool.
-  This tool is used to detect credible and non-credible news articles.
+**Summary**
+This project includes a machine learning tool that detects **credible** and **non-credible** Philippine news articles.  
+- `train.py` – Builds and trains the model.  
+- `classify.py` – Uses the trained model to classify new articles with a **confidence score**.
 
-Specification:
-  Uses TF-idf and a Naive Bayes classifier 
-  Trained on the fake news corpus (~22,000 articles)
-  Assignes a confidence score.
+**Specifications**
+- Uses **TF-IDF** for feature extraction and a **Naive Bayes** classifier.
+- Trained on the **Philippine Fake News Corpus** (~22,000 articles).
+- Outputs a **credibility prediction** with a probability score.
 
-Installation And Setup:
 
-Clone Repository:
-  git clone https://github.com/ethanguardo/filipino_fake_news_detector.git
-  
-Install Dependencies:
+**Installation and Setup**
+
+**Clone Repository:**
+```bash
+git clone https://github.com/ethanguardo/filipino_fake_news_detector.git
+cd filipino_fake_news_detector
+
+```
+
+**Install dependencies:**
+```bash
   pip install -r requirements.txt
+```
 
-Train Model (if joblib not installed):
+**Train Model (if joblib not installed):**
+```bash
   python3 train.py
+```
 
-Run Classifier:
+
+**Run Classifier:**
+```bash
   python3 classify.py
+```
 
 
-  
