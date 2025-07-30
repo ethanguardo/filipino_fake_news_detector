@@ -1,6 +1,7 @@
 **Filipino Fake News Detector**
 
 **Summary**
+
 This project includes a machine learning tool that detects **credible** and **non-credible** Philippine news articles.  
 - `train.py` – Builds and trains the model.  
 - `classify.py` – Uses the trained model to classify new articles with a **confidence score**.
