@@ -3,8 +3,17 @@
 **Summary**
 
 This project includes a machine learning tool that detects **credible** and **non-credible** Philippine news articles.  
-- `train.py` – Builds and trains the model.  
+- `train.py` – Builds and trains the model from the given dataset.  
 - `classify.py` – Uses the trained model to classify new articles with a **confidence score**.
+
+**Dataset**
+
+This project uses the **Philippine Fake News Corpus** created by Aaron Carl Fernandez.
+
+- GitHub Repository: [https://github.com/aaroncarlfernandez/FakeNewsPhilippines](https://github.com/aaroncarlfernandez/FakeNewsPhilippines)
+- Research Paper: [Computing the Linguistic-Based Cues of Credible and Not Credible News in the Philippines: Towards Fake News Detection](https://www.researchgate.net/publication/334724915_Computing_the_Linguistic-Based_Cues_of_Credible_and_Not_Credible_News_in_the_Philippines_Towards_Fake_News_Detection)
+
+Dataset from 2019 by Aaron Carl Fernandez. Used for fair academic use for research purposes.
 
 **Specifications**
 - Uses **TF-IDF** for feature extraction and a **Naive Bayes** classifier.
